@@ -1,0 +1,156 @@
+/* Страница загрузки изображения */
+
+.image-upload-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Предпросмотр до отправки */
+.image-preview-box {
+  margin-top: 1rem;
+  border: 2px dashed #cbd5e1;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.preview-image {
+  display: block;
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+/* Блок результата */
+.image-result-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.annotated-image-box {
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f8fafc;
+}
+
+.annotated-image {
+  display: block;
+  max-width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+/* Метаданные */
+.result-meta {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.result-meta h3 {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  color: #1e293b;
+}
+
+.result-message {
+  margin-bottom: 1rem;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.result-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.6rem;
+}
+
+.result-label {
+  font-weight: 600;
+  color: #64748b;
+  min-width: 110px;
+  font-size: 0.9rem;
+}
+
+.result-value {
+  color: #1e293b;
+  font-size: 0.95rem;
+}
+
+.plate-number {
+  font-family: monospace;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  background: #f1f5f9;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+/* Бейджи статуса */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.badge-entry {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.badge-exit {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.warning-text {
+  color: #b45309;
+}
+
+/* Кнопки */
+.form-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.btn-secondary {
+  padding: 0.6rem 1.25rem;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  color: #475569;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.15s;
+}
+
+.btn-secondary:hover {
+  background: #f1f5f9;
+}
+
+/* Широкие экраны — расположить форму и результат рядом */
+@media (min-width: 900px) {
+  .image-upload-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .form-container {
+    flex: 0 0 340px;
+  }
+
+  .image-result-container {
+    flex: 1;
+  }
+}

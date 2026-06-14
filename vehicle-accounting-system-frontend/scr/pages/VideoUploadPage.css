@@ -1,0 +1,189 @@
+/* Страница загрузки видео */
+
+.video-upload-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Кнопки */
+.form-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.btn-secondary {
+  padding: 0.6rem 1.25rem;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  color: #475569;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.15s;
+}
+
+.btn-secondary:hover {
+  background: #f1f5f9;
+}
+
+/* Блок результата */
+.video-result-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Статус-бар */
+.status-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.status-pending,
+.status-running {
+  background: #fef9c3;
+  color: #854d0e;
+  border: 1px solid #fde68a;
+}
+
+.status-complete {
+  background: #dcfce7;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.status-failed {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.uuid-badge {
+  margin-left: auto;
+  font-size: 0.75rem;
+  font-weight: 400;
+  font-family: monospace;
+  color: inherit;
+  opacity: 0.7;
+}
+
+/* Спиннер */
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Аннотированный кадр */
+.annotated-image-box {
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f8fafc;
+}
+
+.annotated-image {
+  display: block;
+  max-width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+/* Метаданные */
+.result-meta {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.result-meta h3 {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  color: #1e293b;
+}
+
+.result-message {
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.result-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.6rem;
+}
+
+.result-label {
+  font-weight: 600;
+  color: #64748b;
+  min-width: 130px;
+  font-size: 0.9rem;
+}
+
+.result-value {
+  color: #1e293b;
+  font-size: 0.95rem;
+}
+
+.plate-number {
+  font-family: monospace;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  background: #f1f5f9;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.badge-entry {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.badge-exit {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* Широкие экраны */
+@media (min-width: 900px) {
+  .video-upload-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .form-container {
+    flex: 0 0 340px;
+  }
+
+  .video-result-container {
+    flex: 1;
+  }
+}
